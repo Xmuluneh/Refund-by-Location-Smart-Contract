@@ -6,8 +6,9 @@ import "./ECR20.sol";
 contract GeoLogixRefund {
     address public owner;
     YourERC20Token public token;
+   
     
-    strut Driver {
+    struct Driver {
         string name;
         uint256 latitude;
         uint256 longitude;
