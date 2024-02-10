@@ -50,7 +50,7 @@ $ npx hardhat
 ## Flutter App Setup
 ### iOS
 
-- For iOS setup, ensure you have Xcode installed.
+- Ensure you have Xcode installed.
 
 ```
 $  git clone https://github.com/Xmuluneh/Refund-by-Location-Smart-Contract.git
