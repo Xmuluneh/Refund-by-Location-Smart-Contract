@@ -1,10 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
 import 'package:web3dart/web3dart.dart';
 import 'package:encrypt/encrypt.dart';
 import 'package:flutterdapp/Encrypt-Decrypt.dart';
-import 'main.dart' as pass;
+import 'main.dart' as main;
 
 class ChildModel extends ChangeNotifier {
   bool isLoading = true;
@@ -38,12 +39,12 @@ class ChildModel extends ChangeNotifier {
 
   Future<void> getEmp() async {
     _emp = await rootBundle.loadString("../assets/emp.json");
-    _contractAddress = "0x4943030bce7e49dd13b4dd120c0fef7dde3c18a0";
+    _contractAddress = dotenv.env['PRIVATE_KEY']!;
   }
 
   Future<void> getCredentials() async {
     _credentials = EthPrivateKey.fromHex(
-      "d585835f87981557df21fbaf99df4c9d06fd374b6efd121c027e0655cee5b627",
+      dotenv.env['PRIVATE_KEY']!,
     );
   }
 
