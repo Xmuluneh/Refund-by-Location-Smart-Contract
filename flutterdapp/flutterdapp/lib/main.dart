@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutterdapp/ParentPage.dart';
+import 'package:flutterdapp/LocationPage.dart';
 import 'package:flutterdapp/parentModel.dart';
 import 'package:flutterdapp/childModel.dart';
 import 'package:provider/provider.dart';
-import 'package:flutterdapp/ChildPage.dart';
+import 'package:flutterdapp/NewChildPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutterdapp/NewChildPage.dart';
