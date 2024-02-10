@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LocationPage extends StatelessWidget {
-  const LocationPage({Key? key}) : super(key: key);
+  const LocationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,9 @@ class LocationPage extends StatelessWidget {
                 ),
                 child: MaterialButton(
                   onPressed: () async {
-                    await listModel.getCoordinates();
+                    listModel.getCoordinates();
                   },
-                  child: Text(
+                  child: const Text(
                     'View Employee Location',
                     style: TextStyle(
                       fontSize: 20,
@@ -35,14 +35,14 @@ class LocationPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Text(
                 listModel.isLoading
                     ? "Employee Last known Location: \nNo Data"
                     : "Coordinates:\n${listModel.latitude}, ${listModel.longitude}",
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Container(
                 width: MediaQuery.of(context).size.width / 1.3,
                 height: 50,
@@ -65,7 +65,7 @@ class LocationPage extends StatelessWidget {
                       throw "Couldn't launch URL";
                     }
                   },
-                  child: Text(
+                  child: const Text(
                     'View in Maps',
                     style: TextStyle(
                       fontSize: 20,

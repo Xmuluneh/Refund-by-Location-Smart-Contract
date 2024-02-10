@@ -10,7 +10,7 @@ class ChildModel extends ChangeNotifier {
   bool isLoading = true;
   late Client _httpClient;
   late String _contractAddress;
-  late String _abi;
+  late String _emp;
   late Web3Client _client;
   late EthPrivateKey _credentials;
   late DeployedContract _contract;
@@ -31,13 +31,13 @@ class ChildModel extends ChangeNotifier {
       "https://mainnet.infura.io/v3/24cd45b6689b4b3183112fd501758f2c",
       _httpClient,
     );
-    await getAbi();
+    await getEmp();
     await getCredentials();
     await getDeployedContract();
   }
 
-  Future<void> getAbi() async {
-    _abi = await rootBundle.loadString("../assets/abi.json");
+  Future<void> getEmp() async {
+    _emp = await rootBundle.loadString("../assets/emp.json");
     _contractAddress = "0x4943030bce7e49dd13b4dd120c0fef7dde3c18a0";
   }
 
@@ -49,7 +49,7 @@ class ChildModel extends ChangeNotifier {
 
   Future<void> getDeployedContract() async {
     _contract = DeployedContract(
-      ContractAbi.fromJson(_abi, "Project"),
+      ContractAbi.fromJson(_emp, "Project"),
       EthereumAddress.fromHex(_contractAddress),
     );
     _readCoordinates = _contract.function("readCoordinates");
