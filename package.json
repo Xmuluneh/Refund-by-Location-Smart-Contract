@@ -1,0 +1,27 @@
+{
+  "name": "refund-by-location-smart-contract",
+  "version": "1.0.0",
+  "description": "# Project Overview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xmuluneh/Refund-by-Location-Smart-Contract.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xmuluneh/Refund-by-Location-Smart-Contract/issues"
+  },
+  "homepage": "https://github.com/Xmuluneh/Refund-by-Location-Smart-Contract#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
